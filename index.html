@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>forked.win — we make other people's projects better</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="Forked-win-logo.png">
+<link rel="stylesheet" href="site-styles.css">
+</head>
+<body data-t="hero">
+
+<header><div class="wrap">
+  <a class="logo" href="#top">forked<i>.</i>win</a>
+  <nav><a href="#work">Work</a><a href="#how">How we work</a><a href="team.html">Team</a><a href="#join">Join</a></nav>
+</div></header>
+
+<div class="rail" aria-hidden="true"><b></b><s></s></div>
+
+<main id="top">
+<section class="hero" data-t="hero">
+  <div class="wrap">
+    <div>
+      <h1><span><em>We fork it.</em></span><span><em>We fix it.</em></span><span><em>We send it back.</em></span></h1>
+      <p class="lede">forked.win is an open-source group that picks up other people's projects and makes them better, one pull request at a time.</p>
+      <div class="cta">
+        <a class="btn" href="#join">Come contribute</a>
+        <a class="link" href="#work">See what we've merged</a>
+      </div>
+    </div>
+    <svg class="graph" viewBox="0 0 600 440" role="img" aria-label="A git history where three branches split from main and merge back in">
+      <path class="ln main" pathLength="1" d="M10 220 H590"/>
+      <path class="ln b1" pathLength="1" d="M90 220 C130 220 140 110 190 110 H330 C380 110 390 220 430 220"/>
+      <path class="ln b2" pathLength="1" d="M170 220 C210 220 220 330 270 330 H410 C460 330 470 220 510 220"/>
+      <path class="ln b3" pathLength="1" d="M300 220 C330 220 340 160 380 160 H430 C470 160 480 220 520 220"/>
+      <g stroke="var(--fg)"><circle cx="10" cy="220" r="8" style="animation-delay:.1s"/><circle cx="90" cy="220" r="8" style="animation-delay:.5s"/></g>
+      <g stroke="var(--violet)"><circle cx="190" cy="110" r="8" style="animation-delay:1.1s"/><circle cx="330" cy="110" r="8" style="animation-delay:1.5s"/></g>
+      <g stroke="var(--amber)"><circle cx="270" cy="330" r="8" style="animation-delay:1.7s"/><circle cx="410" cy="330" r="8" style="animation-delay:2.1s"/></g>
+      <circle class="win" cx="560" cy="220" r="12"/>
+      <text x="10" y="252" style="animation-delay:.3s">main</text>
+      <text x="190" y="88" style="animation-delay:1.4s">fix/null-check</text>
+      <text x="270" y="364" style="animation-delay:2s">docs/setup-guide</text>
+      <text x="518" y="192" style="animation-delay:3.1s">merged</text>
+    </svg>
+  </div>
+</section>
+
+<section class="work" id="work" data-t="work">
+  <div class="wrap split">
+    <div class="rv">
+      <h2>Other people's code, in better shape.</h2>
+      <p class="sub">Maintainers are stretched thin. We read the issue tracker, pick up the bugs nobody has time for, and send patches that are ready to merge.</p>
+    </div>
+    <ul class="log rv">
+      <li><span class="tag">fix</span><span class="what">Crash when config file is empty<small>Handled the missing-key case and added a test for it</small></span><span class="st">merged</span></li>
+      <li><span class="tag">docs</span><span class="what">Rewrote the install guide<small>Steps now match the current release, with Windows covered</small></span><span class="st">merged</span></li>
+      <li><span class="tag">perf</span><span class="what">Cut startup time by a third<small>Lazy-loaded the plugins that most users never touch</small></span><span class="st">merged</span></li>
+      <li><span class="tag">a11y</span><span class="what">Keyboard navigation for menus<small>Focus order and visible outlines throughout</small></span><span class="st">in review</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="how" id="how" data-t="how">
+  <div class="wrap">
+    <div class="rv">
+      <h2>How a contribution happens.</h2>
+      <p class="sub">We keep it simple and respectful of the project we're helping. The upstream maintainers set the rules; we follow them.</p>
+    </div>
+    <div class="steps rv">
+      <div class="step"><h3>Fork</h3><p>We find an open issue, read the contributing guide, and make our own copy to work in.</p><code>git fork upstream/project</code></div>
+      <div class="step"><h3>Fix</h3><p>Small, focused changes with tests and clear commit messages. Two of us review before anything leaves the group.</p><code>git commit -m "fix: ..."</code></div>
+      <div class="step"><h3>Send it back</h3><p>We open the pull request, answer feedback, and stay on it until it lands or the maintainers say no thanks.</p><code>git push &amp;&amp; open PR</code></div>
+    </div>
+    <div class="vals rv">
+      <div><h3>Maintainers come first</h3><p>We ask before starting large changes, and we never open a pull request that creates more review work than it saves.</p></div>
+      <div><h3>Everything stays public</h3><p>Our patches, our reviews and our mistakes are all in the open. You can read exactly how we work.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="join" id="join" data-t="join">
+  <div class="wrap">
+    <h2 class="rv">Got a weekend and a favourite project?</h2>
+    <p class="sub rv">Bring a bug you've been annoyed by. Beginners are welcome, and so are veterans who are tired of watching good projects stall.</p>
+    <a class="btn rv" href="https://github.com/Forked-Win">Join us on GitHub</a>
+    <footer><span>forked.win · open source, all of it</span><span>Made by contributors, for maintainers.</span></footer>
+  </div>
+</section>
+</main>
+
+<script src="home-script.js"></script>
+</body>
+</html>
